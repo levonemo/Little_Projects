@@ -125,39 +125,29 @@ class spring_damper_force_system:
         # Plot for angular displacement
         plt.figure(figsize=(13, 6))
         plt.plot(solution_end.t, solution_end.y[0], label='${\Theta}$(t)')
-        # plt.title('Angular Displacement')
-        # plt.xlabel('Time (s)')
-        plt.title('Açısal Değişim')
-        plt.xlabel('Zaman (s)')
+        plt.title('Angular Displacement')
+        plt.xlabel('Time (s)')
         plt.ylabel(r"${\Theta}$ [rad]")
         plt.legend()
         plt.grid(True)
 
         # Plot for support force - center
         plt.figure(figsize=(13, 6))
-        # plt.plot(solution_center.t, Fa_values, label='Support Force Fa(t)')
-        # plt.title('Support Force')
-        # plt.xlabel('Time (s)')
-        plt.plot(solution_center.t, Fa_values, label='Mesnet Tepki Kuvveti Fa(t)')
-        plt.plot()
-        plt.title('Mesnet Tepki')
-        plt.xlabel('Zaman (s)')
+        plt.plot(solution_center.t, Fa_values, label='Support Force Fa(t)')
+        plt.title('Support Force')
+        plt.xlabel('Time (s)')
         plt.ylabel('Fa [N]')
         plt.legend()
         plt.grid(True)
 
         # Plot for original force function vs. Fourier series approximation
         plt.figure(figsize=(13, 6))
-        # plt.plot(t, original, label='Original Force Function')
-        plt.plot(t, original, label='Orijinal Kuvvet Fonksiyonu')
+        plt.plot(t, original, label='Original Force Function')
         plt.plot(t, approximation,
                  label=f'Fourier Series Approx. ({self.N} terms)')
-        # plt.title(
-        #     'Original Force Function vs. Fourier Series Approximation ({} terms)'.format(self.N))
-        # plt.xlabel('Time (t) [s]')
         plt.title(
-            'Orijinal Kuvvet Fonksiyonu vs. Fourier Serisi Yaklaşımı ({} terim)'.format(self.N))
-        plt.xlabel('Zaman (t) [s]')
+            'Original Force Function vs. Fourier Series Approximation ({} terms)'.format(self.N))
+        plt.xlabel('Time (t) [s]')
         plt.ylabel('F [N]')
         plt.legend()
         plt.grid(True)
@@ -169,12 +159,9 @@ class spring_damper_force_system:
         # Plot
         plt.figure(figsize=(10, 6))
         plt.bar(df['Frequency (w)'], df['Amplitude'])
-        # plt.title('Frequency vs Amplitude')
-        # plt.xlabel('Frequency (rad/s)')
-        # plt.ylabel('Amplitude')
-        plt.title('Frekans vs Genlik')
-        plt.xlabel('Frekans (rad/s)')
-        plt.ylabel('Genlik')
+        plt.title('Frequency vs Amplitude')
+        plt.xlabel('Frequency (rad/s)')
+        plt.ylabel('Amplitude')
         plt.grid(True)
         plt.show()
 
