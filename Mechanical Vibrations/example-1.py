@@ -1,4 +1,4 @@
-from odev1_class import spring_damper_system as sds
+from Spring_Damper_Force_Sytems import spring_damper_force_system as sds
 import numpy as np
 import cProfile
 
